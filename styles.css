@@ -1,33 +1,37 @@
+/* Estilos generales para el cuerpo de la página */
 body {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    color: white;
-    font-family: Arial, sans-serif;
+    background-color: black; /* Fondo negro */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    height: 100vh; /* Altura del cuerpo igual al 100% del viewport */
+    overflow: hidden; /* Oculta el scroll */
+    color: white; /* Color del texto en blanco */
+    font-family: Arial, sans-serif; /* Fuente del texto */
 }
 
+/* Estilos para el canvas del juego */
 #gameCanvas {
-    background-color: #111;
-    border: 2px solid white;
+    background-color: #111; /* Fondo oscuro para el canvas */
+    border: 2px solid white; /* Borde blanco */
 }
 
+/* Estilos para el marcador de puntuación, vidas y ronda */
 #scoreBoard {
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-bottom: 10px; /* Margen inferior para separar del canvas */
+    font-size: 20px; /* Tamaño de la fuente */
 }
 
+/* Estilos para la pantalla de Game Over */
 #gameOverScreen, #winScreen {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border: 2px solid white;
-    text-align: center;
+    display: none; /* Oculta la pantalla por defecto */
+    position: absolute; /* Posicionamiento absoluto para centrar */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centrado */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    padding: 20px; /* Espaciado interno */
+    border: 2px solid white; /* Borde blanco */
+    text-align: center; /* Alinea el texto al centro */
 }
