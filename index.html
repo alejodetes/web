@@ -1,26 +1,54 @@
 <!DOCTYPE html>
+<!-- Declaración del tipo de documento como HTML5 -->
 <html lang="es">
+<!-- Etiqueta raíz del documento, con el atributo lang="es" para indicar que el idioma es español -->
+
 <head>
+    <!-- Encabezado del documento, contiene metadatos y enlaces a recursos externos -->
     <meta charset="UTF-8">
+    <!-- Especifica la codificación de caracteres como UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la vista para que sea responsive, ajustándose al ancho del dispositivo -->
     <title>Space Invaders</title>
+    <!-- Título de la página que aparece en la pestaña del navegador -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Enlace a la hoja de estilos CSS externa -->
 </head>
+
 <body>
+    <!-- Cuerpo del documento, contiene el contenido visible de la página -->
+
     <div id="scoreBoard">
+        <!-- Contenedor para mostrar la puntuación, vidas y ronda actual -->
         Puntuación: <span id="score">0</span> | 
+        <!-- Muestra la puntuación actual, inicialmente 0 -->
         Vidas: <span id="lives">3</span> | 
+        <!-- Muestra las vidas restantes, inicialmente 3 -->
         Ronda: <span id="round">1</span>/5
+        <!-- Muestra la ronda actual y el total de rondas, inicialmente 1 de 5 -->
     </div>
+
     <canvas id="gameCanvas" width="600" height="400"></canvas>
+    <!-- Elemento canvas donde se dibujará el juego, con un tamaño de 600x400 píxeles -->
+
     <div id="gameOverScreen">
+        <!-- Contenedor para la pantalla de "Game Over", inicialmente oculta -->
         <h2>Game Over</h2>
+        <!-- Título de la pantalla de "Game Over" -->
         <button onclick="restartGame()">Reiniciar</button>
+        <!-- Botón para reiniciar el juego, llama a la función restartGame() al hacer clic -->
     </div>
+
     <div id="winScreen">
+        <!-- Contenedor para la pantalla de victoria, inicialmente oculta -->
         <h2>¡Ganaste!</h2>
+        <!-- Título de la pantalla de victoria -->
         <button onclick="restartGame()">Reiniciar</button>
+        <!-- Botón para reiniciar el juego, llama a la función restartGame() al hacer clic -->
     </div>
+
     <script src="game.js"></script>
+    <!-- Enlace al archivo JavaScript externo que contiene la lógica del juego -->
 </body>
+
 </html>
