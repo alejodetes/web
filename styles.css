@@ -1,0 +1,133 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente principal */
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Fondo con degradado */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el padding predeterminado */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura del cuerpo igual al 100% del viewport */
+    overflow: hidden; /* Oculta el scroll */
+}
+
+/* Estilos para los menús (inicio, pausa, perdiste) */
+.menu {
+    text-align: center; /* Alinea el texto al centro */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+}
+
+/* Estilos para el título de los menús */
+.menu h1 {
+    font-size: 2.5rem; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos para los botones de los menús */
+.menu button {
+    background-color: #ff6f61; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para los botones */
+.menu button:hover {
+    background-color: #ff3b2f; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Clase para ocultar elementos */
+.oculto {
+    display: none; /* Oculta el elemento */
+}
+
+/* Estilos para el área del juego */
+#juego {
+    text-align: center; /* Alinea el texto al centro */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+}
+
+/* Estilos para el puntaje y el tiempo */
+#puntaje, #tiempo {
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para el botón de pausa */
+#btn-pausa {
+    background-color: #ff6f61; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para el botón de pausa */
+#btn-pausa:hover {
+    background-color: #ff3b2f; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilos para el área de juego */
+#area-juego {
+    position: relative; /* Posicionamiento relativo */
+    width: 100vw; /* Ancho igual al 100% del viewport */
+    height: 80vh; /* Altura igual al 80% del viewport */
+    margin-top: 20px; /* Margen superior */
+}
+
+/* Estilos para los globos */
+.globo {
+    position: absolute; /* Posicionamiento absoluto */
+    width: 60px; /* Ancho del globo */
+    height: 80px; /* Altura del globo */
+    background-color: #ff6f61; /* Color de fondo */
+    border-radius: 50%; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    animation: flotar 5s linear; /* Animación de flotar */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: transform 0.2s ease; /* Transición suave */
+}
+
+/* Efecto hover para los globos */
+.globo:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del globo */
+}
+
+/* Estilos para las bombas (globos especiales) */
+.bomba {
+    background-color: #333; /* Color de fondo oscuro */
+}
+
+/* Animación para hacer flotar los globos */
+@keyframes flotar {
+    0% { bottom: -100px; } /* Comienza fuera de la pantalla */
+    100% { bottom: 100vh; } /* Termina en la parte superior de la pantalla */
+}
+
+/* Animación para el efecto de explosión */
+@keyframes explotar {
+    0% { transform: scale(1); opacity: 1; } /* Tamaño normal y visible */
+    100% { transform: scale(2); opacity: 0; } /* Aumenta el tamaño y desaparece */
+}
+
+/* Clase para aplicar la animación de explosión */
+.explotar {
+    animation: explotar 0.3s ease-out; /* Aplica la animación de explosión */
+}

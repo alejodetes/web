@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento como HTML5 -->
+<html lang="es">
+<!-- Etiqueta raíz del documento, con el atributo lang="es" para indicar que el idioma es español -->
+
+<head>
+    <!-- Encabezado del documento, contiene metadatos y enlaces a recursos externos -->
+    <meta charset="UTF-8">
+    <!-- Especifica la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la vista para que sea responsive, ajustándose al ancho del dispositivo -->
+    <title>Juego de Explotar Globos</title>
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Enlace a la hoja de estilos CSS externa -->
+</head>
+
+<body>
+    <!-- Cuerpo del documento, contiene el contenido visible de la página -->
+
+    <!-- Menú de inicio -->
+    <div id="menu-inicio" class="menu">
+        <h1>Explota los Globos</h1>
+        <!-- Título del juego -->
+        <button id="btn-iniciar">Iniciar Juego</button>
+        <!-- Botón para iniciar el juego -->
+    </div>
+
+    <!-- Área del juego (oculta inicialmente) -->
+    <div id="juego" class="oculto">
+        <div id="puntaje">Puntaje: 0</div>
+        <!-- Muestra el puntaje actual -->
+        <div id="tiempo">Tiempo: 60</div>
+        <!-- Muestra el tiempo restante -->
+        <button id="btn-pausa">Pausa</button>
+        <!-- Botón para pausar el juego -->
+        <div id="area-juego"></div>
+        <!-- Área donde aparecerán los globos -->
+    </div>
+
+    <!-- Menú de pausa (oculto inicialmente) -->
+    <div id="menu-pausa" class="menu oculto">
+        <h1>Juego en Pausa</h1>
+        <!-- Título del menú de pausa -->
+        <button id="btn-reanudar">Reanudar</button>
+        <!-- Botón para reanudar el juego -->
+        <button id="btn-reiniciar">Reiniciar</button>
+        <!-- Botón para reiniciar el juego -->
+    </div>
+
+    <!-- Menú de "Perdiste" (oculto inicialmente) -->
+    <div id="menu-perdiste" class="menu oculto">
+        <h1>¡Perdiste!</h1>
+        <!-- Título del menú de "Perdiste" -->
+        <p id="puntaje-final">Puntaje Final: 0</p>
+        <!-- Muestra el puntaje final -->
+        <button id="btn-reiniciar-perdiste">Reiniciar Juego</button>
+        <!-- Botón para reiniciar el juego -->
+    </div>
+
+    <!-- Enlace al archivo JavaScript externo que contiene la lógica del juego -->
+    <script src="script.js"></script>
+</body>
+
+</html>
